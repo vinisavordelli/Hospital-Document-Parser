@@ -7,26 +7,24 @@ class prescription_parser(generic_parser):
         self.text = text
 
     def get_doctor_info(self):
-        return self.get_from_text("Dr(.*)Name", self.text, re.DOTALL)
+        return self.get_from_text("Dr(.*)Name", re.DOTALL)
 
     def get_patient_name(self):
-        return self.get_from_text("Name:(.*)Date", self.text)
+        return self.get_from_text("Name:(.*)Date")
 
     def get_address(self):
-        return self.get_from_text("Address[^\n]", self.text)
+        return self.get_from_text("Address[^\n]")
 
     def get_prescription(self):
         return self.get_from_text(
-            "Address[^\n]*(.*)Directions", self.text, flags=re.DOTALL
+            "Address[^\n]*(.*)Directions", flags=re.DOTALL
         )
 
     def get_directions(self):
-        return self.get_from_text(
-            "Directions:(.*)Refill", self.text, flags=re.DOTALL
-        )
+        return self.get_from_text("Directions:(.*)Refill", flags=re.DOTALL)
 
     def get_refill(self):
-        return self.get_from_text("Refill:(.*)", self.text)
+        return self.get_from_text("Refill:(.*)")
 
     def parse(self):
         return {
