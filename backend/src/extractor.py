@@ -18,4 +18,4 @@ def extact_info(file_path, doc_type):
 
 
 if __name__ == "__main__":
-    extact_info("../resources/prescription/pre_1.pdf", "prescription")
+    print(extact_info("../resources/prescription/pre_1.pdf", "prescription"))
