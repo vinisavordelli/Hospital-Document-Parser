@@ -2,7 +2,7 @@ import abc
 import re
 
 
-class generic_parser(metaclass=abc.ABCMeta):
+class GenericParser(metaclass=abc.ABCMeta):
     def __init__(self, text):
         self.text = text
 
@@ -11,6 +11,4 @@ class generic_parser(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
     def parse(self):
-        # Parse the document
-        # Return a list of tuples (word, count)
         pass

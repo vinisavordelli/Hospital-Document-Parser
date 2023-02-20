@@ -2,7 +2,7 @@ from generic_parser import generic_parser
 import re
 
 
-class prescription_parser(generic_parser):
+class PrescriptionParser(generic_parser):
     def __init__(self, text):
         self.text = text
 
@@ -54,5 +54,5 @@ Finish in 2.5 weeks a
 Lialda - take 2 pill everyday for 1 month >
 
 Refill: 2 times"""
-    pp = prescription_parser(test)
+    pp = PrescriptionParser(test)
     print(pp.parse())
