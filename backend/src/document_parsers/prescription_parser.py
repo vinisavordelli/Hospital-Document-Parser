@@ -40,4 +40,4 @@ class PrescriptionParser(GenericParser):
 if __name__ == "__main__":
     test = """"""
     pp = PrescriptionParser(test)
-    print(pp.get_address())
+    print(pp.parse())
