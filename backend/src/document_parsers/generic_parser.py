@@ -7,7 +7,11 @@ class GenericParser(metaclass=abc.ABCMeta):
         self.text = text
 
     def get_from_text(self, pattern, flags=0):
-        return re.findall(pattern, self.text, flags)[0].strip()
+        try:
+            result = re.findall(pattern, self.text, flags)[0].strip()
+            return result
+        except IndexError:
+            return "Not Found"
 
     @abc.abstractmethod
     def parse(self):

@@ -38,22 +38,6 @@ class PrescriptionParser(GenericParser):
 
 
 if __name__ == "__main__":
-    test = """Dr John Smith, M.D
-
-2 Non-Important Street,
-New York, Phone (900)-323- ~2222
-
-Name:  Virat Kohli Date: 2/05/2022
-
-Address: 2 cricket blvd, New Delhi
-
-| Omeprazole 40 meg
-
- 
-   
-
-Directions: Use two tablets daily for three months
-
-Refill: 3 times"""
+    test = """"""
     pp = PrescriptionParser(test)
     print(pp.get_address())
