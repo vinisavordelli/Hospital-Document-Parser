@@ -1,8 +1,8 @@
-from generic_parser import generic_parser
+from src.document_parsers.generic_parser import GenericParser
 import re
 
 
-class PrescriptionParser(generic_parser):
+class PrescriptionParser(GenericParser):
     def __init__(self, text):
         self.text = text
 
@@ -13,7 +13,7 @@ class PrescriptionParser(generic_parser):
         return self.get_from_text("Name:(.*)Date")
 
     def get_address(self):
-        return self.get_from_text("Address[^\n]")
+        return self.get_from_text("Address:(.*)")
 
     def get_prescription(self):
         return self.get_from_text(
@@ -39,20 +39,21 @@ class PrescriptionParser(generic_parser):
 
 if __name__ == "__main__":
     test = """Dr John Smith, M.D
+
 2 Non-Important Street,
-New York, Phone (000)-111-2222
+New York, Phone (900)-323- ~2222
 
-Name: Marta Sharapova Date: 9/11/2022
-Address: 9 tennis court, new Russia, DC
-Prednisone 20 mig
-Lialda 2.4 gram
+Name:  Virat Kohli Date: 2/05/2022
 
-Directions:
+Address: 2 cricket blvd, New Delhi
 
-Prednisone, Taper 5 mg every 3 days,
-Finish in 2.5 weeks a
-Lialda - take 2 pill everyday for 1 month >
+| Omeprazole 40 meg
 
-Refill: 2 times"""
+ 
+   
+
+Directions: Use two tablets daily for three months
+
+Refill: 3 times"""
     pp = PrescriptionParser(test)
-    print(pp.parse())
+    print(pp.get_address())
