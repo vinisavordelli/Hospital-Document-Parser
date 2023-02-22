@@ -10,12 +10,14 @@ def extact_info(file_path, doc_type):
     for page in pages:
         img = img_processing(page)
         text = get_text(img)
-        text = "\n" + text
+
+        document_text = "\n" + text
         if doc_type == "prescription":
-            return text
+            print(document_text)
+            return document_text
         elif doc_type == "patient_details":
             pass
 
 
 if __name__ == "__main__":
-    print(extact_info("../resources/prescription/pre_1.pdf", "prescription"))
+    extact_info("./pd_1.pdf", "prescription")
