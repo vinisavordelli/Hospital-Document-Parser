@@ -1,4 +1,4 @@
-from generic_parser import GenericParser
+from src.document_parser.generic_parser import GenericParser
 
 
 class PatientDetailsParser(GenericParser):
