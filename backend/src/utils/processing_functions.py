@@ -20,7 +20,7 @@ def img_processing(img):
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
         cv2.THRESH_BINARY,
         69,
-        13,
+        15,
     )
     return img
 
