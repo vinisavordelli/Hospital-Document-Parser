@@ -7,9 +7,28 @@ from utils.processing_functions import (
     get_text,
 )
 
+supported_img_formats = [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".pbm",
+    ".pgm",
+    ".ppm",
+    ".pxm",
+    ".pnm",
+]
+
 
 def extact_info(file_path, doc_type):
-    pages = pdf2img(file_path)
+    if file_path.endswith(".pdf"):
+        pages = pdf2img(file_path)
+    else:
+        for img_format in supported_img_formats:
+            if file_path.endswith(img_format):
+                pages = [file_path]
+                break
+            else:
+                raise Exception("Invalid file format")
     document_text = ""
     for page in pages:
         img = img_processing(page)
