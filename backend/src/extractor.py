@@ -18,6 +18,7 @@ def extact_info(file_path, doc_type):
     if doc_type == "prescription":
         data = PrescriptionParser(document_text).parse()
     elif doc_type == "patient_details":
+        print(PatientDetailsParser(document_text).data.keys())
         data = PatientDetailsParser(document_text).parse()
     else:
         raise Exception("Invalid document type")
@@ -26,4 +27,4 @@ def extact_info(file_path, doc_type):
 
 if __name__ == "__main__":
     # extact_info("./pd_1.pdf", "patient_details")
-    print(extact_info("./pd_1.pdf", "patient_details"))
+    print(extact_info("./pre_2.pdf", "prescription"))

@@ -15,8 +15,6 @@ class GenericParser(metaclass=abc.ABCMeta):
                 result = re.findall(pattern, self.text, reDotall)[0].strip()
             for line in result.split("\n"):
                 line.strip()
-                print(result)
-                print(line)
                 noise = [
                     *re.findall(
                         r"^[a-zA-Z]{1,2}\s?(?:\s|\n|[^a-zA-Z0-9])",
@@ -25,13 +23,12 @@ class GenericParser(metaclass=abc.ABCMeta):
                     ),
                     *re.findall(r"^[a-zA-Z]{1,2}$", line, re.DOTALL),
                 ]
-
-                print(noise)
                 for n in noise:
-                    if n.lower() == "no":
+                    if n.lower() == "no" or n == "N/":
                         continue
                     result = result.replace(n, "").strip()
-            return re.sub("\n\n+", "\n", result)
+                no_page_break = re.sub("\x0c", "\n", result)
+            return re.sub("\n\n+", "\n", no_page_break)
         except IndexError:
             return "Not Found"
 
