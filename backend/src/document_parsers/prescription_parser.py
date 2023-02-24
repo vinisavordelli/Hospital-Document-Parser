@@ -1,4 +1,4 @@
-from src.document_parsers.generic_parser import GenericParser
+from document_parsers.generic_parser import GenericParser
 
 
 class PrescriptionParser(GenericParser):
