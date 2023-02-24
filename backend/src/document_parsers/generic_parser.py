@@ -5,6 +5,7 @@ import re
 class GenericParser(metaclass=abc.ABCMeta):
     def __init__(self, text):
         self.text = text
+        self.patterns = {}
 
     def get_from_text(self, pattern, reDotall=0):
         try:

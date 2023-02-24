@@ -12,6 +12,7 @@ class PrescriptionParser(GenericParser):
             "directions": r"Directions:(.*)Refill",
             "refill": r"Refill:(.*)",
         }
+        self.data = self.parse()
 
     def parse(self):
         return {
