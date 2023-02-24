@@ -13,7 +13,25 @@ class GenericParser(metaclass=abc.ABCMeta):
                 result = re.findall(pattern, self.text, re.DOTALL)[0].strip()
             else:
                 result = re.findall(pattern, self.text, reDotall)[0].strip()
-            return result
+            for line in result.split("\n"):
+                line.strip()
+                print(result)
+                print(line)
+                noise = [
+                    *re.findall(
+                        r"^[a-zA-Z]{1,2}\s?(?:\s|\n|[^a-zA-Z0-9])",
+                        line,
+                        re.DOTALL,
+                    ),
+                    *re.findall(r"^[a-zA-Z]{1,2}$", line, re.DOTALL),
+                ]
+
+                print(noise)
+                for n in noise:
+                    if n.lower() == "no":
+                        continue
+                    result = result.replace(n, "").strip()
+            return re.sub("\n\n+", "\n", result)
         except IndexError:
             return "Not Found"
 

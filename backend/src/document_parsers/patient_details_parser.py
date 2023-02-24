@@ -5,7 +5,7 @@ class PatientDetailsParser(GenericParser):
     def __init__(self, text):
         self.text = text
         self.patterns = {
-            "issue_date": r"^(.*)\n",
+            "issue_date": r"[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}",
             "patient_name": r"(?<=Birth Date\s).*?\s(?:(?!"
             + r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b)\S)+",
             "patient_birth_date": r"[a-zA-Z]{3}\s[0-1]?[1-9]\s[1-9]{4}",
@@ -21,7 +21,8 @@ class PatientDetailsParser(GenericParser):
             + r"(IMMUNE|NOT IMMUNE)",
             "hepatitis_b_vaccitation": r"Hepa.+\?\s+\n?.+\s?.?\s?"
             + r"(Yes|yes|No|no|Positive|positive|Negative|negative)",
-            "medical_problems": r"Medical Problems.*?\n(?:.*\n)*?.*?\s?(.*)",
+            "medical_problems": r"Medical Problems.*?\n(?:.*\n)*?.*?\s?"
+            + r"(.*)(?:.ame o.)",
             "has_insurance": r".nsurance.+\?\s+\n?.+\s?.?\s?"
             + r"(Yes|yes|No|no|Positive|positive|Negative|negative)",
             "insurance_provider": r"(?:.ompany.)([\s\S\n]*?)(?=.o.icy)",
