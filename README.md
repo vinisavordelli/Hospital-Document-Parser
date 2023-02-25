@@ -25,10 +25,9 @@ The output should be something like this:
 }
 ```
 
-The patient details form should look like this:
-
-![pd_1-1](https://user-images.githubusercontent.com/77638347/221332474-c256f5ef-0dfa-4111-94a0-ba6eaa1a23be.jpg)
-![pd_1-2](https://user-images.githubusercontent.com/77638347/221332472-72ec8724-ac21-4f8a-b355-7988ee975d26.jpg))
+The patient details form should look like this: </br>
+<img src="https://user-images.githubusercontent.com/77638347/221332474-c256f5ef-0dfa-4111-94a0-ba6eaa1a23be.jpg" alt= “patient_details” width="50%">
+<img src="https://user-images.githubusercontent.com/77638347/221332472-72ec8724-ac21-4f8a-b355-7988ee975d26.jpg" alt= “page2_of_patient_details” width="50%">
 
 And the result should be:
 
@@ -70,7 +69,9 @@ For a satisfactory result the process takes multiple steps:
 
 3. With the images ready, the program will reprocess the image as it can have shadows, blurs and other things that can make it hard to read the image.
    The result from the prescription I showed earlier should look like this:
-   ![processed_pre_1](https://user-images.githubusercontent.com/77638347/221332470-0c4b8e53-6743-43c6-9c0d-f5a513a6caab.png)
+    
+    
+   <img src="https://user-images.githubusercontent.com/77638347/221332470-0c4b8e53-6743-43c6-9c0d-f5a513a6caab.png" alt= “processed_img” width="50%">
 
 4. With that done, it's time to get the text from that image.
 
