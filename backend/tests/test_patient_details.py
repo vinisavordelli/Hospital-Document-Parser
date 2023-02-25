@@ -1,4 +1,6 @@
-from src.document_parsers.patient_details_parser import PatientDetailsParser
+from backend.src.document_parsers.patient_details_parser import (
+    PatientDetailsParser,
+)
 import mocks.patient_details_mocks as pdm
 import pytest
 

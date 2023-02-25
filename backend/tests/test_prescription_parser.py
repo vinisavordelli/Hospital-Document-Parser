@@ -1,4 +1,4 @@
-from src.document_parsers.prescription_parser import PrescriptionParser
+from backend.src.document_parsers.prescription_parser import PrescriptionParser
 import mocks.prescription_mocks as pm
 import pytest
 

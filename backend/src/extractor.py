@@ -1,4 +1,6 @@
-from document_parsers.patient_details_parser import PatientDetailsParser
+from document_parsers.patient_details_parser import (
+    PatientDetailsParser,
+)
 from document_parsers.prescription_parser import PrescriptionParser
 
 from utils.processing_functions import (
