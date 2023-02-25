@@ -9,9 +9,8 @@ This project aims to simulate a hospital program that receives images and pdf fi
 
 Let's assume 2 test cases, one for a prescription and one for a form with the patient's information.
 
-The prescription should look like this:
-
-![pre_1](https://user-images.githubusercontent.com/77638347/221332475-7632bb62-4f37-415d-a0e5-bf4170273b2f.jpg)
+The prescription should look like this: </br>
+<img src="https://user-images.githubusercontent.com/77638347/221332475-7632bb62-4f37-415d-a0e5-bf4170273b2f.jpg" alt= “prescription” width="50%">
 
 The output should be something like this:
 
@@ -58,9 +57,9 @@ And the result should be:
 ```
 
 Keep in mind those keys could be more segmented, but it is just an idea.
-
+</details>
 <details>
-<Summary>How does it Work?</Summary>
+<Summary><h2>How does it work?</h2></Summary>
 
 For a satisfactory result the process takes multiple steps:
 
@@ -77,7 +76,11 @@ For a satisfactory result the process takes multiple steps:
 
 5. The information is not usefull as it is now, so we will arrange it in an object and remove any noise from it. As the result comes a little dirty like in the text below (taken from the patient details showed early)
 
+<details> <summary>Click here to show the extracted text</summary>
+
+
 ```py
+
 17/12/2020
 
 
@@ -153,12 +156,15 @@ Expiry Date:
 30 December 2020
 ```
 
+
+</details>
+
 6. Done, the Program Should have extracted all the useful data.
 
 </details>
 
 <details>
-<Summary>How Can You test it?</Summary>
+<Summary><h2>How can You test it?</h2></Summary>
 It is quite simple, first you need to clone this repository:
 
 ```sh
@@ -186,11 +192,10 @@ make run #Starts the application through the terminal
 ```
 
 Running the Project with `make run`:
+<img src="https://user-images.githubusercontent.com/77638347/221332468-e48ebe1d-bd1d-48c2-aab4-939ada9d1cd5.gif" alt= “running the project with make run” width="80%">
 
-![run](https://user-images.githubusercontent.com/77638347/221332468-e48ebe1d-bd1d-48c2-aab4-939ada9d1cd5.gif)
 
 Using it with make start and postman:
-
-![start](https://user-images.githubusercontent.com/77638347/221332466-6e601c6e-335c-4783-8109-35bd7890b79b.gif)
+<img src="https://user-images.githubusercontent.com/77638347/221332466-6e601c6e-335c-4783-8109-35bd7890b79b.gif" alt= “Usin it with make start and Postman” width="80%">
 
 </details>
