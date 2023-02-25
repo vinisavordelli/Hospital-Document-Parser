@@ -39,7 +39,7 @@ async def extract(
             file_extension = f"{file_format}"
             break
 
-    file_path = f"../uploads/{str(uuid4())}{file_extension}"
+    file_path = f"./{str(uuid4())}{file_extension}"
 
     with open(file_path, "wb") as f:
         f.write(file_content)
