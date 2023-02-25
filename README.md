@@ -11,7 +11,7 @@ Let's assume 2 test cases, one for a prescription and one for a form with the pa
 
 The prescription should look like this:
 
-![prescription]("https://raw.githubusercontent.com/vinisavordelli/Hospital-Document-Parser/main/imgs/pre_1.jpg")
+![pre_1](https://user-images.githubusercontent.com/77638347/221332475-7632bb62-4f37-415d-a0e5-bf4170273b2f.jpg)
 
 The output should be something like this:
 
@@ -28,8 +28,8 @@ The output should be something like this:
 
 The patient details form should look like this:
 
-![First Page of Patient Details]("./imgs/pd_1-1.jpg")
-![Second Page of Patient Details]("./imgs/pd_1-2.jpg")
+![pd_1-1](https://user-images.githubusercontent.com/77638347/221332474-c256f5ef-0dfa-4111-94a0-ba6eaa1a23be.jpg)
+![pd_1-2](https://user-images.githubusercontent.com/77638347/221332472-72ec8724-ac21-4f8a-b355-7988ee975d26.jpg))
 
 And the result should be:
 
@@ -71,7 +71,7 @@ For a satisfactory result the process takes multiple steps:
 
 3. With the images ready, the program will reprocess the image as it can have shadows, blurs and other things that can make it hard to read the image.
    The result from the prescription I showed earlier should look like this:
-   ![processed prescription]('./imgs/processed_pre_1.png')
+   ![processed_pre_1](https://user-images.githubusercontent.com/77638347/221332470-0c4b8e53-6743-43c6-9c0d-f5a513a6caab.png)
 
 4. With that done, it's time to get the text from that image.
 
@@ -187,10 +187,10 @@ make run #Starts the application through the terminal
 
 Running the Project with `make run`:
 
-![Make Run]('./imgs/run.gif')
+![run](https://user-images.githubusercontent.com/77638347/221332468-e48ebe1d-bd1d-48c2-aab4-939ada9d1cd5.gif)
 
 Using it with make start and postman:
 
-![Playing With the Project in Postman]('./imgs/start.gif')
+![start](https://user-images.githubusercontent.com/77638347/221332466-6e601c6e-335c-4783-8109-35bd7890b79b.gif)
 
 </details>
