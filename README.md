@@ -11,7 +11,7 @@ Let's assume 2 test cases, one for a prescription and one for a form with the pa
 
 The prescription should look like this:
 
-![prescription]("./imgs/pre_1.jpg")
+![prescription]("https://raw.githubusercontent.com/vinisavordelli/Hospital-Document-Parser/main/imgs/pre_1.jpg")
 
 The output should be something like this:
 
