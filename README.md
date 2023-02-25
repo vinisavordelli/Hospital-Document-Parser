@@ -162,13 +162,13 @@ Expiry Date:
 It is quite simple, first you need to clone this repository:
 
 ```sh
-git clone
+git clone git@github.com:vinisavordelli/Hospital-Document-Parser.git
 ```
 
 After that, open the repository you just cloned.
 
 ```sh
-code ./
+code ./Hospital-Document-Parser
 ```
 
 Install the necessery packages
